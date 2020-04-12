@@ -1,1 +1,14 @@
 
+1.%fs ls /mnt/sf_open_data/fire_dept_calls_for_service
+2.spark
+
+3.fireServiceCallsDF = spark.read.csv('', header=True, inferschema=True)
+4.from pyspark.sql.types import StructType, StructField, IntegerType, StringType, BooleanType
+
+5.#Note that we are removing all space characters from the col names to prevent errors when writing to parquet later
+
+fireSchema = StructType([StructField('CallNumber', IntergerType(), True),
+
+   ])
+   
+
